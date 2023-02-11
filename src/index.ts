@@ -1,8 +1,12 @@
-import test from './test'
+// import test from './test'
+import {client} from './database'
 
 const hello = () => {
   console.log('Hello World')
-  test()
+  client
+  console.log(client)
+  // test()
 }
 
 hello()
+

@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
+  devtool: 'inline-source-map',
   entry: './src/index.ts',
   module: {
     rules: [
@@ -19,4 +20,9 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
   },
+  resolve: {
+    fallback: {
+      "string_decoder": false
+    }
+  }
 };
